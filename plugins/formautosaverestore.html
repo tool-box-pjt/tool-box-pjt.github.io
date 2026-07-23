@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormAutosaveRestore | Tool-Box Project</title>
+<meta name="description" content="FormAutosaveRestoreの概要、機能、使い方、バージョン情報。">
+<style>
+:root {
+  --bg:#f7f8fa; --surface:#fff; --text:#202124; --muted:#667085;
+  --line:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff;
+  --warning-bg:#fff7ed; --warning-line:#fed7aa;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.8}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.container{width:min(900px,calc(100% - 40px));margin:auto}
+header{background:var(--surface);border-bottom:1px solid var(--line)}
+.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:700;letter-spacing:.02em}.logo small{display:block;color:var(--muted);font-size:.72rem;font-weight:400;letter-spacing:0}
+nav a{margin-left:20px;color:var(--text);font-size:.95rem}
+main{padding:48px 0 72px}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:28px}
+.hero{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:32px;margin-bottom:24px}
+h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3rem);line-height:1.25}
+.lead{margin:0;color:var(--muted);font-size:1.08rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.8rem}
+.download{margin-top:26px;padding:20px;border:1px solid var(--line);border-radius:10px;background:#fafafa}
+.button{display:inline-block;padding:11px 18px;border-radius:7px;background:var(--accent);color:#fff;font-size:.95rem}
+.button:hover{color:#fff;text-decoration:none;opacity:.9}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:20px}
+h2{margin:0 0 16px;font-size:1.45rem}
+h3{margin:24px 0 8px;font-size:1.08rem}
+ul,ol{padding-left:1.5em}
+code{padding:2px 5px;background:#f1f5f9;border-radius:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}
+pre{overflow:auto;padding:16px;background:#111827;color:#f9fafb;border-radius:8px}
+.warning{background:var(--warning-bg);border-color:var(--warning-line)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{width:30%;font-weight:600}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+@media(max-width:700px){
+.container{width:min(100% - 28px,900px)}
+.header-inner{align-items:flex-start;padding:16px 0;flex-direction:column}
+nav a{margin:0 16px 0 0}
+.hero,section{padding:22px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      Tool-Box Project
+      <small>PowerCMS X Plugins</small>
+    </div>
+    <nav aria-label="メインナビゲーション">
+      <a href="../index.html">プラグイン一覧</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Tool-Box Project</a> / FormAutosaveRestore
+    </div>
+
+    <div class="hero">
+      <h1>FormAutosaveRestore</h1>
+      <p class="lead">
+        入力中のフォーム内容を保存し、ページを再表示した際に復元するためのPowerCMS Xプラグインです。
+      </p>
+
+      <div class="meta">
+        <span class="tag">PowerCMS X</span>
+        <span class="tag">管理画面</span>
+        <span class="tag">フォーム</span>
+        <span class="tag">無料配布</span>
+      </div>
+
+      <div class="download">
+        <strong>最新版：v1.0.0</strong>
+        <p>公開日：2026年○月○日</p>
+        <a class="button" href="/downloads/FormAutosaveRestore-1.0.0.zip" download>
+          ZIPをダウンロード
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <h2>概要</h2>
+      <p>
+        ここにプラグインの目的を記載します。どのような課題を解決するプラグインなのか、
+        どのようなユーザーに役立つのかを、できるだけ簡潔に説明します。
+      </p>
+      <p>
+        例：長いフォームを入力している途中で画面を移動した場合や、ブラウザを閉じてしまった場合に、
+        入力内容を復元できるようにします。
+      </p>
+    </section>
+
+    <section>
+      <h2>主な機能</h2>
+      <ul>
+        <li>入力内容を自動的に保存</li>
+        <li>保存された入力内容の復元</li>
+        <li>復元対象となるフォームや項目の設定</li>
+        <li>管理画面からの設定変更</li>
+      </ul>
+      <p>
+        ※ここには実際のプラグインの機能を記載してください。
+      </p>
+    </section>
+
+    <section>
+      <h2>使い方</h2>
+
+      <h3>1. インストール</h3>
+      <ol>
+        <li>ダウンロードしたZIPファイルを解凍します。</li>
+        <li>PowerCMS Xのプラグインディレクトリに配置します。</li>
+        <li>管理画面からプラグインを有効化します。</li>
+      </ol>
+
+      <h3>2. 設定</h3>
+      <p>
+        管理画面から必要な設定を行います。設定項目の詳細や、設定例をここに記載します。
+      </p>
+
+      <h3>3. 利用</h3>
+      <p>
+        設定完了後、対象となる画面でプラグインの機能が利用できます。
+      </p>
+    </section>
+
+    <section>
+      <h2>動作環境</h2>
+      <table>
+        <tr><th>CMS</th><td>PowerCMS X（対応バージョンを記載）</td></tr>
+        <tr><th>PHP</th><td>PHP（対応バージョンを記載）</td></tr>
+        <tr><th>動作確認環境</th><td>（確認した環境を記載）</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>バージョン情報</h2>
+      <table>
+        <tr><th>v1.0.0</th><td>2026年○月○日：初回リリース</td></tr>
+        <tr><th>v0.9.0</th><td>2026年○月○日：ベータ版公開</td></tr>
+      </table>
+    </section>
+
+    <section class="warning">
+      <h2>ご利用にあたって</h2>
+      <p>
+        本プラグインは現在無料で配布しています。ただし、将来的に配布方法、提供条件、
+        ライセンス、価格などを変更する可能性があります。
+      </p>
+      <p>
+        本プラグインは、利用者自身の責任においてご利用ください。
+        利用環境や他のプラグインとの組み合わせによっては、正常に動作しない場合があります。
+      </p>
+      <p>
+        Tool-Box Projectでは、本プラグインについて個別の導入支援、環境調査、
+        カスタマイズ、動作保証その他のサポートを提供していません。
+      </p>
+      <p>
+        本プラグインの利用によって生じたデータの消失、システム障害、
+        その他の損害について、Tool-Box Projectは責任を負いません。
+        ただし、適用される法令により免責が認められない場合を除きます。
+      </p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ・サポート</h2>
+      <p>
+        本プラグインは無償配布であり、個別のサポートは提供していません。
+        不具合や改善提案については、今後設置予定の公開ページなどで受け付ける場合があります。
+      </p>
+    </section>
+
+    <p style="margin-top:28px"><a href="../index.html">← プラグイン一覧に戻る</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Tool-Box Project</p>
+  </div>
+</footer>
+</body>
+</html>
